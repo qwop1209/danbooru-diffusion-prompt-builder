@@ -25,22 +25,23 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
     faEye,
     faEyeSlash,
-    faLightbulbOn,
-    faLightbulbSlash,
-    faShieldCheck,
-    faShieldExclamation,
-} from '@fortawesome/pro-light-svg-icons'
+    faShieldHalved,
+    faShieldVirus,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+    faLightbulb
+} from '@fortawesome/free-regular-svg-icons'
 import { useSettingsStore } from '../stores/settings'
 
 const settingsStore = useSettingsStore()
 const activeIcon = h(FontAwesomeIcon, { icon: faEye })
 const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
 
-const safeIcon = h(FontAwesomeIcon, { icon: faShieldCheck })
-const unsafeIcon = h(FontAwesomeIcon, { icon: faShieldExclamation })
+const safeIcon = h(FontAwesomeIcon, { icon: faShieldHalved })
+const unsafeIcon = h(FontAwesomeIcon, { icon: faShieldVirus })
 
-const lightIcon = h(FontAwesomeIcon, { icon: faLightbulbOn })
-const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
+const lightIcon = h(FontAwesomeIcon, { icon: faLightbulb })
+const darkIcon = h(FontAwesomeIcon, { icon: faLightbulb })
 
 const ax = h('span', { class: 'switch-text-icon math-style' }, [
     'a',
